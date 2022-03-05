@@ -43,12 +43,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway with ansible container
-  |40.121.104.252| Ubuntu 18.04 Server LTS            |
-| Web-1    |          |            |  Ubuntu 18.04 Server LTS |
-| Web-2    |          |            | Ubuntu 18.04 Server LTS |
-| ELK-Sever | hosts Elk stack container
-   | 52.180.67.235   |  Ubuntu 18.04 Server LTS       |
+| Jump Box | Gateway with ansible container |40.121.104.252| Ubuntu 18.04 Server LTS |
+| Web-1    | Hosts DVWA Container Contains Filebeat and Metricbeat| 10.1.0.5 |  Ubuntu 18.04 Server LTS |
+| Web-2    | Hosts DVWA Container Contains Filebeat and Metricbeat (backup) | 10.1.0.6 | Ubuntu 18.04 Server LTS |
+| ELK-Sever | Hosts Elk stack container| 52.180.67.235  private ip 10.2.0.4 |  Ubuntu 18.04 Server LTS |
 
 ### Access Policies
 
