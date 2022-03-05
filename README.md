@@ -63,8 +63,8 @@ A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes              | 99.234.0.0/16    |
-| Web-1   | No                    |                      |
-| Web-2   |   No                  |                      |
+| Web-1   | No                    |  10.1.0.4 (Jumpbox Private IP)  |
+| Web-2   |   No                  |  10.1.0.4         |
 | ELK-Server   |   Yes      |   99.234.0.0/16    |
 
 
