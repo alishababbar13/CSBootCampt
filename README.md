@@ -116,7 +116,7 @@ For Filebeat:
 - sudo filebeat modules enable system
 - sudo filebeat setup
 - sudo service filebeat start
-![](https://github.com/alishababbar13/CSBootCampt/blob/174dacf545c5afe447ededdfefa5ea89a41d38bb/Images/Kibana-filebeat.png)
+![](https://github.com/alishababbar13/CSBootCampt/blob/2507f2569f3eabdfc8caf6f8bb8df28b0267f65b/Images/Kibana-filebeat.png)
 
 For Metricbeat:
 - curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
@@ -124,4 +124,4 @@ For Metricbeat:
 - sudo metricbeat modules enable docker
 - sudo metricbeat setup
 - sudo service metricbeat start
-![](https://github.com/alishababbar13/CSBootCampt/blob/174dacf545c5afe447ededdfefa5ea89a41d38bb/Images/kibana-metricbeat.png)
+![](https://github.com/alishababbar13/CSBootCampt/blob/2507f2569f3eabdfc8caf6f8bb8df28b0267f65b/Images/kibana-metricbeat.png)
