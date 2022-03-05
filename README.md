@@ -43,10 +43,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Ubuntu 18.04 Server LTS            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Jump Box | Gateway  |40.121.104.252| Ubuntu 18.04 Server LTS            |
+| Web-1    |          |            |                  |
+| Web-2    |          |            |                  |
+| ELK-Sever |          |            |                  |
 
 ### Access Policies
 
