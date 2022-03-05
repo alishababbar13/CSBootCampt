@@ -86,25 +86,42 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- Web-1 10.1.0.5
+- Web-2 10.1.0.6
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat watches for the changes in the files in the locations that we specify or the log files and then collects and send the data to logstash/elasticsearch for example the modifications in a file.
+- Metricbeat collects the metric data from the services and the operating system and sends it to logstash/elasticsearch such as Apache service
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
-
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Copy the filebeat-playbook.yml and metricbeat-playbook.yml files to /etc/ansible/roles.
+- Update the /etc/ansible/hosts file to include the ip addresses of the VMs below webservers
+- Run the playbook, and navigate to http://52.180.67.235:5601 to check that the installation worked as expected.
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+- After having edited the hosts file to add the Web VM private IPs under webservers, run the following command:
+- ansible-playbook /etc/ansible/roles/filebeat-playbook.yml
+- ansible-playbook /etc/ansible/roles/metricbeat-playbook.yml
+
+For Filebeat:
+- curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb
+- sudo dpkg -i filebeat-7.6.1-amd64.deb
+- sudo filebeat modules enable system
+- sudo filebeat setup
+- sudo service filebeat start
+![](https://github.com/alishababbar13/CSBootCampt/blob/174dacf545c5afe447ededdfefa5ea89a41d38bb/Images/Kibana-filebeat.png)
+
+For Metricbeat:
+- curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.1-amd64.deb
+- sudo dpkg -i metricbeat-7.6.1-amd64.deb
+- sudo metricbeat modules enable docker
+- sudo metricbeat setup
+- sudo service metricbeat start
+![](https://github.com/alishababbar13/CSBootCampt/blob/174dacf545c5afe447ededdfefa5ea89a41d38bb/Images/kibana-metricbeat.png)
