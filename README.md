@@ -4,11 +4,15 @@ The files in this repository were used to configure the network depicted below.
 
 ![](./Images/Unit_13.png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the filebeat-playbook.yml file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Yml files may be used to install only certain pieces of it, such as Filebeat.
 
 YML files referenced here:
 
+[DVWA installation](https://github.com/alishababbar13/CSBootCampt/blob/ffd5649f8ce560b493debba4d1ef21c684fec786/Ansible/DVWA-Installation.yml)
+[ELK installation](https://github.com/alishababbar13/CSBootCampt/blob/ffd5649f8ce560b493debba4d1ef21c684fec786/Ansible/ELK-Installation.yml)
 [Filebeat Playbook](https://github.com/alishababbar13/CSBootCampt/blob/f410143f2f4ac7a3a8561f0d6a5c9b8ba9e4b185/Ansible/roles/filebeat-playbook.yml)
+[Metric Playbook](https://github.com/alishababbar13/CSBootCampt/blob/ffd5649f8ce560b493debba4d1ef21c684fec786/Ansible/roles/metricbeat-playbook.yml)
+
 
 This document contains the following details:
 - Description of the Topologu\y
